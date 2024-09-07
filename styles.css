@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #0f0c29,
+    #302b63,
+    #24243e
+  ); /* Gradiente escuro e vibrante */
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* Estilo base do header */
+header {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  padding: 20px 10px;
+  text-align: center;
+  border-bottom: 4px solid #00d4ff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Animação do gradiente radial */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.2), transparent 70%);
+  animation: rotateGradient 6s infinite linear;
+  z-index: 0;
+}
+
+/* Animação de rotação */
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo do título do header */
+header h1 {
+  position: relative;
+  z-index: 1;
+  color: #00d4ff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 3px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 0 25px rgba(0, 212, 255, 0.8), 0 0 50px rgba(0, 212, 255, 0.5);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 -3px 0 #00d4ff;
+}
+
+nav ul li a:hover {
+  color: #00d4ff;
+  box-shadow: inset 0 -30px 0 rgba(0, 212, 255, 0.2);
+}
+
+section {
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  background-color: #1e1e1e; /* Fundo escuro */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  color: #00c6ff; /* Ciano neon */
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  margin-left: 10px;
+}
+
+p,
+ul {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #b0b0b0; /* Cinza Claro */
+}
+
+ul li:hover {
+  color: #00c6ff; /* Ciano neon */
+}
+
+footer {
+  background-color: #1e3c72; /* Azul escuro */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  background-color: #444;
+}
+
+form button {
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Gradiente neon */
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+p {
+  font-size: 1.3rem;
+  color: white;
+  padding: 10px;
+}
+
+.quote-section {
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  background-color: #1e1e1e; /* Cor de fundo consistente */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.quote-section h3 {
+  background: linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+  ); /* Gradiente ciano e azul */
+  color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+.quote-section {
+  display: flex;
+  flex-wrap: wrap; /* Torna a seção flexível e permite quebra de linha em telas menores */
+  justify-content: space-around; /* Espaçamento ao redor das imagens */
+  gap: 20px; /* Espaçamento entre os elementos */
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.quote-image {
+  width: calc(
+    50% - 40px
+  ); /* Faz as imagens ocuparem metade da largura disponível menos o gap */
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo do Scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Fundo do track */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+  ); /* Gradiente neon no scroll */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    135deg,
+    #0072ff,
+    #00c6ff
+  ); /* Mudança de cor no hover do scroll */
+}
+
+.image-home {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-home:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Máscara de fundo */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Máscara semi-transparente mais escura */
+  display: none; /* Inicialmente invisível */
+  z-index: 999; /* Fica abaixo do formulário */
+}
+
+/* Formulário de Contato */
+#contact-form {
+  position: fixed;
+  bottom: -100%; /* Inicialmente fora da tela */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: #1e1e1e;
+  color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: bottom 0.5s ease;
+  z-index: 1000; /* Fica acima do overlay */
+}
+
+#contact-form.active {
+  bottom: 10%; /* Ajuste a posição quando ativado */
+}
+
+#contact-form .close-btn {
+  background: #00c6ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: right;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+#contact-form .close-btn:hover {
+  background: #0072ff;
+}
+
+#show-form-btn {
+  background: #00c6ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+#show-form-btn:hover {
+  background: #0072ff;
+}
+
+.chatgpt-notice {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #1e1e1e);
+  color: #f4f4f4;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  font-size: 1rem;
+  z-index: 1000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.chatgpt-notice.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chatgpt-notice a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .quote-image {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 1.5em; /* Reduz o tamanho do título em telas menores */
+  }
+
+  section {
+    padding: 20px 10px;
+    margin: 20px auto;
+    max-width: 95%;
+  }
+
+  nav ul {
+    flex-direction: column; /* Muda o menu de horizontal para vertical */
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  form {
+    width: 90%; /* Ajusta a largura do formulário para melhor visualização em telas pequenas */
+    margin: 0 auto;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9em; /* Ajusta o tamanho da fonte em dispositivos menores */
+    padding: 10px; /* Reduz o padding para se ajustar melhor */
+  }
+
+  form button {
+    font-size: 1em; /* Ajusta o tamanho da fonte do botão */
+    padding: 12px; /* Reduz o padding para se ajustar melhor */
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em; /* Reduz ainda mais o tamanho do título em telas muito pequenas */
+  }
+
+  form {
+    width: 100%; /* Ajusta a largura do formulário para preencher a tela em dispositivos muito pequenos */
+    padding: 10px; /* Adiciona um pouco de padding */
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.8em; /* Ajusta ainda mais o tamanho da fonte */
+    padding: 8px; /* Reduz o padding */
+  }
+
+  form button {
+    font-size: 0.9em; /* Ajusta o tamanho da fonte do botão */
+    padding: 10px; /* Reduz o padding */
+  }
+}
